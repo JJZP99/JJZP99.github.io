@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Layout Design</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #F2F2F7;
+            padding: 24px;
+            min-height: 100vh;
+
+             padding-right: 15%; 
+    padding-left: 15%;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #000;
+            outline-offset: 3px;
+        }
+
+        .container {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* NAVBAR */
+        header{
+            background: #ffffff;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-radius: 2rem;
+        }
+
+        nav{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul{
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li{
+            list-style: none;
+            height: 5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        nav li a{
+            text-decoration: none;
+        }
+
+        nav span{
+            color: #000;
+            background: #fff;
+            border: 2px solid #000;
+            padding: 0.5rem 1.25rem;
+            border-radius: 6rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        nav span:hover{
+            background: #F9E450;
+        }
+
+        @media (max-width: 600px){
+            header{
+                font-size: 18px;
+            }
+            nav ul{
+                gap: 0.5rem;
+            }
+            nav span{
+                padding: 0.5rem 0.75rem;
+                font-size: 14px;
+            }
+        }
+
+        /* HERO CARD */
+        .hero-card {
+            background: #ffffff;
+            border-radius: 45px;
+            padding: 32px 28px;
+            color: rgb(0, 0, 0);
+            border: #000 solid;
+            box-shadow: -8px 8px rgb(0, 0, 0);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            min-height: 280px;
+        }
+
+        .hero-card-img {
+            width: 100%;
+            height: 540px;
+            border-radius: 16px;
+            object-fit: cover;
+        }
+
+        .hero-card h2 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .hero-card p {
+            font-size: 13px;
+            opacity: 0.95;
+        }
+
+        .hero-button {
+            background: #34C759;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-weight: 600;
+            align-self: flex-end;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(52, 199, 89, 0.3);
+        }
+
+        /* FEATURED SECTION */
+        .featured-section {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 20px;
+            align-items: stretch;
+        }
+
+        .featured-main {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 24px;
+            color: rgb(0, 0, 0);
+            border: #000 solid;
+            box-shadow: -10px 10px rgb(0, 0, 0);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+            height: 100%;
+        }
+
+        .featured-main-img {
+            width: 100%;
+            height: 350px;
+            border-radius: 16px;
+            object-fit: cover;
+        }
+
+        .featured-main h3 {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .featured-main p {
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .btn-main {
+            background: #34C759;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 24px;
+            font-weight: 600;
+            align-self: flex-start;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(52, 199, 89, 0.3);
+        }
+
+        @media (max-width: 500px) {
+            .featured-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* FOOTER */
+        .footer {
+            background: white;
+            border-radius: 24px;
+            padding: 40px 24px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            border: #000 solid;
+            box-shadow: 0px 10px rgb(0, 0, 0);
+        }
+
+        .footer h2 {
+            font-size: 18px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- NAVBAR -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="lavori.html"><span>Lavori</span></a></li>
+                <li><a href="index.html"><span>JJZP</span></a></li>
+                <li><a href="chisono.html"><span>Chi sono</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero-card" aria-labelledby="hero-title">
+        <img src="presto.jpg" alt="Immagine Hero" class="hero-card-img">
+        <h2 id="hero-title">In My Mind</h2>
+        <p>sit amet, consectetur adipiscing elit.</p>
+        <button class="hero-button" type="button"><a href="esame.html">Scopri</a></button>
+    </section>
+
+    <!-- FEATURED -->
+    <section class="featured-section" aria-label="Contenuti in evidenza">
+
+        <article class="featured-main">
+            <img src="AR_JJZP_ICON.svg" alt="Contenuto in evidenza 1" class="featured-main-img">
+            <h3>MARTIRI - PER MANO DELL'UOMO</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="btn-main" type="button"><a href="martiri.html">Scopri</a></button>
+        </article>
+
+        <article class="featured-main">
+            <img src="YOG.jpg" alt="Contenuto in evidenza 2" class="featured-main-img">
+            <h3>Gangwon 2024 medal design competition</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="btn-main" type="button"><a href="yog.html">Scopri</a></button>
+        </article>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <h2>JJZP</h2>
+            <h6>
+        Copyright (c) 2026 - John Javier Zuniga Perez - URL TO ORIGINAL
+
+Permission is hereby granted, free of charge, to any person 
+obtaining a copy of this software and associated documentation 
+files (the "Software"), to deal in the Software without restriction,
+ including without limitation the rights to use, copy, modify, 
+merge, publish, distribute, sublicense, and/or sell copies of 
+the Software, and to permit persons to whom the Software is 
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall 
+be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+DEALINGS IN THE SOFTWARE.
+    </h6>
+    </footer>
+
+</div>
+
+</body>
+</html>
