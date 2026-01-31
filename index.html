@@ -1,0 +1,125 @@
+<!--
+Ho cercato di usare il minimo numero di tag DIV per sfruttare
+le linee guida di HTML 5 come da qui osservato:
+
+https://miro.medium.com/v2/resize:fit:1400/format:webp/1*l-47gdhkXSfdQqCnC6qbqQ.png
+(Se l'immagine non è visualizzabile, l'ho inserità sotto il nome "Semantica" sulla consegna.)
+
+Tale strutturazione è fondamentale per una corretta
+implementazione per l'aspetto dell'accessibilità.
+-->
+
+<!--
+Base presa da:
+
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content#creating_your_first_html_document
+-->
+
+<!doctype html>
+<html lang="it-IT">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="CSS/style_basic.css">
+    <link rel="stylesheet" href="CSS/style_index.css">
+    <title>JJZP</title>
+  </head>
+  
+  <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="creazioni.html"><span>Creazioni</span></a></li>
+                <li><a href="index.html"><span class="pagina-corrente">Home</span></a></li>
+                <li><a href="chisono.html"><span>Chi sono</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>
+            Benvenuto!
+        </h1>
+
+        <section class="contenuto-evidenza">
+            <figure>
+                <img src="Lavori/2025/FleshArtAttack2025/img_FAA_2025/Intro_Flesh-Art-Attack-2025_1.png" 
+                alt="immagine del protitopo del videogioco, raffigurante un diorama di un parco">
+            </figure>
+            <h1>
+                In My Mind
+            </h1>
+            <h2>
+                Lasciati travolgere dai riccordi...
+            </h2>
+            <button>
+                <h3>
+                    Scopri
+                </h3>
+            </button>
+        </section>
+
+        <section class="contenuto-secondario">
+            <article class="contenuto-sinistra">
+                <figure>
+                    <img class="img-article" src="Lavori/2025/WorkshopPixelArt2025/img_WPA_2025/Skatboard_Boy[640x640].png" alt="Immagine del logo della mostra" >                
+                </figure>
+                <h3>
+                    MARTIRI, PER MANO DELL'UOMO
+                </h3>
+                <p>
+                    Opera realizzata per RomaEuropa Festival
+                </p>
+                <button class="bottone-altro" type="button">
+                    Scopri
+                </button>
+            </article>
+
+            <article class="contenuto-destra">
+                <figure>
+                    <img class="img-article" src="Lavori/2024/YOG2024/img_YOG_2024/Miniatura_Logo_YOG_2024.png" alt="Immagine raffigurante la facciata della medaglia" >
+                </figure>
+                <h3>
+                    Gangwon 2024 - Medal design competition
+                </h3>
+                <p>
+                    Concorso.
+                </p>
+                <button>
+                    Scopri
+                </button>
+            </article>
+        </section>
+
+
+        <footer>
+            <h1>
+                John Javier Zuniga Perez
+            </h1>
+            <h2>
+                Copyright (c) YEAR - John Javier Zuniga Perez
+            </h2>
+            <p>
+            Permission is hereby granted, free of charge, to any person 
+            obtaining a copy of this software and associated documentation 
+            files (the "Software"), to deal in the Software without restriction,
+            including without limitation the rights to use, copy, modify, 
+            merge, publish, distribute, sublicense, and/or sell copies of 
+            the Software, and to permit persons to whom the Software is 
+            furnished to do so, subject to the following conditions:
+            
+            The above copyright notice and this permission notice shall 
+            be included in all copies or substantial portions of the Software.
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+            EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+            OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
+            NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
+            HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+            WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+            DEALINGS IN THE SOFTWARE.
+            </p>
+        </footer>
+    </main>
+  </body>
+</html>
