@@ -36,8 +36,9 @@ main, main h1{
 
 main h1{
     background: none;
-    font-size: 50px;
+    font-size: 80px;
     font-weight: 600;
+    color: #000000;
 }
 
 /*
@@ -53,7 +54,7 @@ per far capire in quale parte del sito ci si trova
 /*Contenuto in primo piano*/
 /*Gestione della n*/
 .contenuto-evidenza {
-    background: #fb816f;
+    background: #FFB0A4;
     background-image: radial-gradient(#fdfefd 5%, transparent 0);
     background-size: 30px 30px;
 
@@ -81,45 +82,43 @@ figure{
 }
 
 /*Gestione scritture al'interno di .contenuto-evidenza*/
-.contenuto-evidenza h1{
+.contenuto-evidenza h2{
     background: none;
     font-size: 60px;
     font-weight: 700;
 }
 
-.contenuto-evidenza h2{
+.contenuto-evidenza h3{
     background: none;
     font-size: 30px;
     font-weight: 500;
 }
 
 /*Gestione bottone all'interno di .contenuto-evidenza*/
-.contenuto-evidenza button{
-    background: #f3c867;
+.contenuto-evidenza .bottone-primario{
+    background: #c7efcf;
     border: none;
     padding: 12px 24px;
     border-radius: 50px;
     align-self: flex-end;
     cursor: pointer;
-    box-shadow: 0 10px #f4ac45;
-}
+    box-shadow: 0 10px #60ab9a;
 
-.contenuto-evidenza button:hover{
-    background: #fed85d;
-}
-
-.contenuto-evidenza button:active{
-    background: #a7b6d1;
-    box-shadow: 0 2px #666;
-    transform: translateY(4px);
-}
-.contenuto-evidenza button h3{
-    background: none;
     text-decoration: none;
     color: rgb(0, 0, 0);
     font-style: italic;
     font-size: 30px;
     font-weight: 600;
+}
+
+.contenuto-evidenza .bottone-primario:hover{
+    background: #fffbb9;
+}
+
+.contenuto-evidenza .bottone-primario:active{
+    background: #bfc4c7;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
 }
 
 /*Contenuti in secondo piano*/
@@ -135,7 +134,7 @@ figure{
 /**/
 .contenuto-sinistra {
     background: #d1c7fd;
-    background-image: radial-gradient(rgb(0, 0, 0) 5%, transparent 0);
+    background-image: radial-gradient(#c383b8 5%, transparent 0);
     background-size: 30px 30px;
 
 
@@ -153,7 +152,7 @@ figure{
 
 .contenuto-destra {
     background: #fddfc7;
-    background-image: radial-gradient(rgb(0, 0, 0) 5%, transparent 0);
+    background-image: radial-gradient(#ff816b 5%, transparent 0);
     background-size: 30px 30px;
 
     
@@ -171,40 +170,51 @@ figure{
 
 .contenuto-sinistra img, .contenuto-destra img{
     width: 100%;
-    height: 350px;
+    height: 450px;
     border-radius: 16px;
     object-fit: cover;
     border: #000000 solid;
 }
 
-.contenuto-sinistra h3, .contenuto-destra h3{
+.contenuto-sinistra h2, .contenuto-destra h2{
     background: none;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 700;
 }
 
 .contenuto-sinistra p, .contenuto-destra p{
     background: none;
-    font-size: 12px;
+    font-size: 20px;
     line-height: 1.5;
 }
 
-.contenuto-sinistra button, .contenuto-destra button{
-    background: #34C759;
-    color: white;
+.contenuto-sinistra .bottone-secondario, .contenuto-destra .bottone-secondario{
+    background: #c7efcf;
     border: none;
     padding: 20px 100px;
-    border-radius: 24px;
+    border-radius: 50px;
     font-weight: 600;
     align-self: center;
     cursor: pointer;
-    box-shadow: 0px 12px rgb(0, 110, 27);
+    box-shadow: 0 10px #60ab9a;
+
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.contenuto-sinistra button:hover, .contenuto-destra button:hover{
-    background: #fed85d;
+.contenuto-sinistra .bottone-secondario:hover, .contenuto-destra .bottone-secondario:hover{
+    background: #fffbb9;
 }
 
+
+.contenuto-sinistra .bottone-secondario:active, .contenuto-destra .bottone-secondario:active{
+    background: #bfc4c7;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
 
 
 
@@ -223,8 +233,12 @@ figure{
 /*Mobile*/
 
 @media (max-width: 1000px){
+    main h1{
+        font-size: 60px;
+        text-align: center;
+    }
     header{
-        box-shadow: 0px 5px rgb(0, 0, 0);
+        box-shadow: 0px 3px rgb(0, 0, 0);
     }
     .contenuto-secondario {
         grid-template-columns: 1fr;

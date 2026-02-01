@@ -27,10 +27,10 @@ https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Y
   
   <body>
     <header>
-        <nav>
+        <nav aria-label="navigazione principale">
             <ul>
                 <li><a href="creazioni.html"><span>Creazioni</span></a></li>
-                <li><a href="index.html"><span class="pagina-corrente">Home</span></a></li>
+                <li><a href="index.html" aria-current="page"><span class="pagina-corrente">Home</span></a></li>
                 <li><a href="chisono.html"><span>Chi sono</span></a></li>
             </ul>
         </nav>
@@ -44,19 +44,17 @@ https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Y
         <section class="contenuto-evidenza">
             <figure>
                 <img src="Lavori/2025/FleshArtAttack2025/img_FAA_2025/Intro_Flesh-Art-Attack-2025_1.png" 
-                alt="immagine del protitopo del videogioco, raffigurante un diorama di un parco">
+                alt="Immagine del sito web che si sta visitando">
             </figure>
-            <h1>
-                In My Mind
-            </h1>
             <h2>
-                Lasciati travolgere dai riccordi...
+                Web Design
             </h2>
-            <button>
-                <h3>
-                    Scopri
-                </h3>
-            </button>
+            <h3>
+                Esame di realizzazione di una pagina web.
+            </h3>
+            <a class="bottone-primario" href="2024.html" aria-label="Scopri il progetto MARTIRI, PER MANO DELL'UOMO">
+                Scopri
+            </a>
         </section>
 
         <section class="contenuto-secondario">
@@ -64,62 +62,72 @@ https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Y
                 <figure>
                     <img class="img-article" src="Lavori/2025/WorkshopPixelArt2025/img_WPA_2025/Skatboard_Boy[640x640].png" alt="Immagine del logo della mostra" >                
                 </figure>
-                <h3>
+                <h2>
                     MARTIRI, PER MANO DELL'UOMO
-                </h3>
+                </h2>
                 <p>
                     Opera realizzata per RomaEuropa Festival
                 </p>
-                <button class="bottone-altro" type="button">
+                <a class="bottone-secondario" href="2025.html" aria-label="Scopri il progetto MARTIRI, PER MANO DELL'UOMO">
                     Scopri
-                </button>
+                </a>
             </article>
 
             <article class="contenuto-destra">
                 <figure>
                     <img class="img-article" src="Lavori/2024/YOG2024/img_YOG_2024/Miniatura_Logo_YOG_2024.png" alt="Immagine raffigurante la facciata della medaglia" >
                 </figure>
-                <h3>
-                    Gangwon 2024 - Medal design competition
-                </h3>
+                <h2>
+                    Skater boy - Pixel Art
+                </h2>
                 <p>
-                    Concorso.
+                    Workshop
                 </p>
-                <button>
+                
+                <!--<button type="button" aria-label="Scopri il progetto Gangwon 2024 - Medal Design Competition">
+                    
+                </button>-->
+                <a class="bottone-secondario" href="2024.html" aria-label="Scopri il progetto MARTIRI, PER MANO DELL'UOMO">
                     Scopri
-                </button>
+                </a>
             </article>
         </section>
 
 
-        <footer>
-            <h1>
-                John Javier Zuniga Perez
-            </h1>
-            <h2>
-                Copyright (c) YEAR - John Javier Zuniga Perez
-            </h2>
-            <p>
-            Permission is hereby granted, free of charge, to any person 
-            obtaining a copy of this software and associated documentation 
-            files (the "Software"), to deal in the Software without restriction,
-            including without limitation the rights to use, copy, modify, 
-            merge, publish, distribute, sublicense, and/or sell copies of 
-            the Software, and to permit persons to whom the Software is 
-            furnished to do so, subject to the following conditions:
-            
-            The above copyright notice and this permission notice shall 
-            be included in all copies or substantial portions of the Software.
-            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
-            EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
-            OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
-            NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
-            HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
-            WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
-            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
-            DEALINGS IN THE SOFTWARE.
-            </p>
-        </footer>
+        
     </main>
+
+    <section class="social">
+    </section>
+    <footer>
+        <p>
+            <strong>
+               John Javier Zuniga Perez 
+            </strong>
+        </p>
+        <p>
+            Copyright (c) YEAR - John Javier Zuniga Perez
+        </p>
+        <p>
+        Permission is hereby granted, free of charge, to any person 
+        obtaining a copy of this software and associated documentation 
+        files (the "Software"), to deal in the Software without restriction,
+        including without limitation the rights to use, copy, modify, 
+        merge, publish, distribute, sublicense, and/or sell copies of 
+        the Software, and to permit persons to whom the Software is 
+        furnished to do so, subject to the following conditions:
+            
+        The above copyright notice and this permission notice shall 
+        be included in all copies or substantial portions of the Software.
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+        OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
+        NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
+        HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+        WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+        DEALINGS IN THE SOFTWARE.
+        </p>
+    </footer>
   </body>
 </html>
