@@ -58,7 +58,6 @@ nella visualizzazione dei singoli progetti ad ogni tot progetti, da sinistra a d
 }
 
 /*Struttura del contenuto delle singole schede di ogni progetto*/
-
 .creazioni-elenco article {
     background: #f7fffd;
     background-image: radial-gradient(#c3bef7 5%, transparent 0);
@@ -104,7 +103,10 @@ nella visualizzazione dei singoli progetti ad ogni tot progetti, da sinistra a d
 }
 
 
-/*bptpme*/
+/*bottone:
+non è stato utilizzato il tag "bottone" perché non risulta adatto 
+per l'accessibilità, quindi, era meglio trasformare il tag <a>
+*/
 
 .creazioni-elenco a{
     background: #c7efcf;
@@ -190,5 +192,4 @@ nella visualizzazione dei singoli progetti ad ogni tot progetti, da sinistra a d
     #prossimamente{
         padding: 20px 20px;
     }
-    
 }

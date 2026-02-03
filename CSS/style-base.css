@@ -1,20 +1,21 @@
 /*
-I file CSS sono stati divisi in:
-"style_basse.css", che contiene tutti i parametri base
-indipendentmente dalla pagina in questione
+I file CSS sono stati divisi in base alla pagina:
+style-index (Per la pagina home)
+style-creazioni (Per la pagina di presentazione dei lavori)
+style-chisono (Per la pagina di presentazione della mia persona)
+style-arte (Per la pagina dei singoli progetti/lavori/opere)
 
-"style_lavori", che contiene i
-divisione dei file CSS è stata fatta per semplificazione,
-per evitare 
-*/
+con un unico file CSS condiviso, denominato "style-base"
+in cui è presente i parametri base della pagina,
+come per esempio la NavBar, Social e Footer.
 
+Il motivo di tale divisione era per facilità nella scrittura
+del CSS.
 
-/*I font sono stati scaricati da Google Font.
-Ho preferito evitare richiami esterni oltre a quegli necessari (come quegli
-di Instagram) per rendere la pagina piu leggera, ma sorpatutto,
-non dipendendo da una fonte esterna.
-quindi, ho inserito i font in locale
-(IMMAGINE N.)
+I font è stato scaricato su GitHub:
+https://github.com/LivKing/Inclusive-Sans
+
+Precisamente, la versione WOFF, adatto all'uso web 
 */
 
 @font-face {
@@ -53,8 +54,8 @@ body {
 
 /*NavBar
 Codice misto e rialborato preso da:
-CodePen
-Mozilla Dev:
+CodePen: https://codepen.io/redoc2/pen/YzeVBBq
+Mozilla Dev: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav
 */
 header {
     background: white;
@@ -103,9 +104,6 @@ nav li{
     align-items: center;
 }
 
-
-
-/*Prove nav*/
 nav li a{
     background: none;
     text-decoration: none;
@@ -136,90 +134,90 @@ nav a:hover{
 /*
 Accessibilità:
 terzo colore per la Navbar,
-per far capire che si ha cliccato al contenuto selezionato
+per far capire che si ha appena cliccato al contenuto selezionato
 */
 nav a:active{
     background: #e86d6d;
     transform: translateY(4px);
 }
 
-/*Il layout mi è stato suggerito da Perpelxity, una IA, ma dal momento che
-aveva organizzato tutto in maniera strana, ho dovuto riadattare il codice al mio caso
-a mano.
-L'IA l'ho dovuta utilizzare perche il piano per di figma è a pagamento.
-*/
+/*I parametri di layout qui sotto mi è stato suggerito da Perpelxity, una IA, ma dal momento che
+aveva organizzato tutto in maniera strana, 
+ho dovuto riadattare il codice al mio caso a mano.
+L'IA l'ho dovuta utilizzare perche il piano per 
+fare determinate cose su Figma è a pagamento e non lo so usare
 
-/*Sessione social*/
+Sessione social*/
 
 
-        .social-section {
-            background: #cbf3f0;
-            background-image: radial-gradient(#2ec4b6 5%, transparent 0);
-            background-size: 30px 30px;
-            border:  solid #000000;
-            border-radius: 24px;
-            padding: 32px 24px;
-            box-shadow: 10px 10px rgb(0, 0, 0);
-        }
+.social-section {
+    background: #cbf3f0;
+    background-image: radial-gradient(#2ec4b6 5%, transparent 0);
+    background-size: 30px 30px;
+    border:  solid #000000;
+    border-radius: 24px;
+    padding: 32px 24px;
+    box-shadow: 10px 10px rgb(0, 0, 0);
+    }
 
-        .social-section h2 {
-            background: none;
-            font-size: 55px;
-            font-weight: 700;
-            color: #000000;
-            margin-bottom: 24px;
-            text-align: left;
-        }
+.social-section h2 {
+    background: none;
+    font-size: 55px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 24px;
+    text-align: left;
+}
 
-        .social-section ul{
+.social-section ul{
 
-            background: none;
-            display: flex;
-            justify-content: center;
-            gap: 200px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
 
-            list-style-type: none;
-            list-style: none;
-        }
+    list-style-type: none;
+    list-style: none;
+}
 
-        .social li{
-            background: none;
-            list-style-type: none;
-            list-style: none;
-        }
+.social li{
+    background: none;
+    list-style-type: none;
+    list-style: none;
+}
 
-        .social-section li a{
-            background: none;
-            width: 64px;
-            height: 64px;
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            color: #333;
-            font-size: 12px;
-            transition: all 0.3s ease;
-            cursor: pointer;
+.social-section li a{
+    background: none;
+    width: 64px;
+    height: 64px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #333;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
 
-            list-style-type: none;
-            list-style: none;
-        }
+    list-style-type: none;
+    list-style: none;
+}
 
-        .social-section a:hover {
-            background: white;
-            transform: scale(1.4);
-        }
+.social-section a:hover {
+    background: white;
+    transform: scale(1.4);
+}
 
-        .social-section img{
-            background: white;
-            width: 200px;
-            height: auto;
-            border: #000000 solid;
-            border-radius: 10px;
-            padding: 10px;
-            box-shadow: 0px 5px #000000;
-        }
+.social-section img{
+    background: white;
+    width: 200px;
+    height: auto;
+    border: #000000 solid;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 5px #000000;
+}
 
 /*Footer*/
 footer {
@@ -237,19 +235,7 @@ footer {
     width: 100%;
     bottom: 0px;
     z-index: 0;
-/*
-
-    
-  height: 100px;
-  background: #333;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-*/
-
 }
-
 
 strong, em {
     background: none;
@@ -275,13 +261,11 @@ footer strong{
 
 /*Adattamento mobile*/
 @media (max-width: 1000px){
-    
     /*Body*/
     body{
         padding-right: 2.5%; 
         padding-left: 2.5%;
     }
-
     /*NavBar*/
     header{
         font-size: 18px;
@@ -293,12 +277,12 @@ footer strong{
         padding: 0.5rem 0.75rem;
         font-size: 20px;
     }
-
     .social-section {
         box-shadow: 2.5px 2.5px rgb(0, 0, 0);
     }
-    
 }
+
+
 @media (max-width: 700px){
 .social-section ul {
         flex-direction: column;   /* verticale */
@@ -347,7 +331,7 @@ a:hover, stronger:hover{
 }
 
 
-/*Soluzione fornitami da GPT*/
+/*Soluzione fornitami da GPT per un*/
 nav li {
     position: relative;
 }

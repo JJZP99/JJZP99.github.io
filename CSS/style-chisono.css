@@ -32,9 +32,6 @@ main h1{
     color: #000000;
 }
 
-
-
-
 .presentazione {
     background-color: #f99777;
     background-image: radial-gradient(#144c93 5%, transparent 0);
@@ -47,7 +44,6 @@ main h1{
     gap: 1.25rem;
     margin-bottom: 2rem;
 }
-
 
 .presentazione-descrizione{
     background: #f9f7ff;
@@ -67,9 +63,6 @@ main h1{
     font-size: 19px;
     font-weight: 400;
 }
-
-    
-
 
 figure{
     background: none;
@@ -99,43 +92,40 @@ iframe{
     background: #0acf8d;
 }
 
-
-
 .cv{
     background: none;
     font-size: 40px;
     font-weight: 600;
 }
 
-/*TEST*/
+@media (max-width: 768px) {
+    main h1{
+        font-size: 60px;
+        text-align: center;
+    }
 
-        @media (max-width: 768px) {
-            main h1{
-                font-size: 60px;
-                text-align: center;
-            }
-            .presentazione {
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-            }
+    .presentazione {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
 
-            iframe{
-                height: 600px;
-            }
+    iframe{
+        height: 600px;
+    }
 
-            .social{
-                height: 600px;
-            }
+    .social{
+        height: 600px;
+    }
 
-            iframe{
-                box-shadow: 2.5px 2.5px rgb(0, 0, 0);
-            }
+    iframe{
+        box-shadow: 2.5px 2.5px rgb(0, 0, 0);
+    }
 
-            .presentazione{
-                box-shadow: 0px 2.5px rgb(0, 0, 0);
-            }
-        }
+    .presentazione{
+        box-shadow: 0px 2.5px rgb(0, 0, 0);
+    }
+}
 
 
 
