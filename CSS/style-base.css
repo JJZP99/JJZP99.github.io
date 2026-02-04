@@ -1,0 +1,362 @@
+/*
+I file CSS sono stati divisi in base alla pagina:
+style-index (Per la pagina home)
+style-creazioni (Per la pagina di presentazione dei lavori)
+style-chisono (Per la pagina di presentazione della mia persona)
+style-arte (Per la pagina dei singoli progetti/lavori/opere)
+
+con un unico file CSS condiviso, denominato "style-base"
+in cui è presente i parametri base della pagina,
+come per esempio la NavBar, Social e Footer.
+
+Il motivo di tale divisione era per facilità nella scrittura
+del CSS.
+
+I font è stato scaricato su GitHub:
+https://github.com/LivKing/Inclusive-Sans
+
+Precisamente, la versione WOFF, adatto all'uso web 
+*/
+
+@font-face {
+  font-family: "Inclusive Sans";
+  src: url("../Font/InclusiveSans[wght].woff2") format("woff2");
+  font-weight: 300 700; /* range pesi Light → Bold */
+  font-style: normal;
+  font-display: swap; /* migliora caricamento */
+}
+
+/* Variable Italic */
+@font-face {
+  font-family: "Inclusive Sans";
+  src: url("../Font/InclusiveSans-Italic[wght].woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: italic;
+  font-display: swap;
+}
+* {
+    font-family: "Inclusive Sans", sans-serif;
+    font-weight: 400;
+}
+/*Body*/
+
+body {
+    background: none;
+    /*Come specificato nelle case historie,
+    voglio che il contenuto si trovi subito al centro e niente ai bordi.
+    Codice preso da:
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/padding
+    */
+    padding-right: 15%; 
+    padding-left: 15%;
+    margin-bottom: 20px;
+}
+
+/*NavBar
+Codice misto e rialborato preso da:
+CodePen: https://codepen.io/redoc2/pen/YzeVBBq
+Mozilla Dev: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav
+*/
+header {
+    background: white;
+    padding: 0.25rem;
+    border-radius: 6rem;
+    border: 0.15rem solid #000000;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 30px;
+    box-shadow: 0rem 0.5rem 0rem #000000;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    background: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+nav ul{
+    background: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+nav li{
+    background: none;
+    position: relative;
+    height: 5rem;
+    z-index: 1;
+    list-style-type: none;
+    list-style: none;
+    margin: 0;  
+    padding: 0;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li a{
+    background: none;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+}
+nav a{
+    background: none;
+    color: #000000;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+nav a:hover{
+    background: none;
+    color: #1a1a1a;
+    background: #fed85d;
+    border: #000000;
+}
+/*
+Accessibilità:
+terzo colore per la Navbar,
+per far capire che si ha appena cliccato al contenuto selezionato
+*/
+nav a:active{
+    background: #e86d6d;
+    transform: translateY(4px);
+}
+
+/*I parametri di layout qui sotto mi è stato suggerito da Perpelxity, una IA, ma dal momento che
+aveva organizzato tutto in maniera strana, 
+ho dovuto riadattare il codice al mio caso a mano.
+L'IA l'ho dovuta utilizzare perche il piano per 
+fare determinate cose su Figma è a pagamento e non lo so usare
+
+Sessione social*/
+
+
+.social-section {
+    background: #cbf3f0;
+    background-image: radial-gradient(#2ec4b6 5%, transparent 0);
+    background-size: 30px 30px;
+    border:  solid #000000;
+    border-radius: 24px;
+    padding: 32px 24px;
+    box-shadow: 10px 10px rgb(0, 0, 0);
+    }
+
+.social-section h2 {
+    background: none;
+    font-size: 55px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.social-section ul{
+
+    background: none;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+
+    list-style-type: none;
+    list-style: none;
+}
+
+.social li{
+    background: none;
+    list-style-type: none;
+    list-style: none;
+}
+
+.social-section li a{
+    background: none;
+    width: 64px;
+    height: 64px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #333;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    list-style-type: none;
+    list-style: none;
+}
+
+.social-section a:hover {
+    background: white;
+    transform: scale(1.4);
+}
+
+.social-section img{
+    background: white;
+    width: 200px;
+    height: auto;
+    border: #000000 solid;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 5px #000000;
+}
+
+/*Footer*/
+footer {
+    background: white;
+    padding: 24px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 22px;
+    color: #2d2d2d;
+    margin-top: 30px;
+    border: solid #000000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    width: 100%;
+    bottom: 0px;
+    z-index: 0;
+}
+
+strong, em {
+    background: none;
+}
+
+footer, footer p {
+    background: white;
+}
+footer strong{
+    background: #ffffff;
+    font-size: 30px;
+}
+.copyright-footer{
+    background: #ffffff;
+    font-size: 20px;
+}
+
+.licenza-footer{
+    background: #ffffff;
+    font-size: 10px;
+}
+
+
+/*Adattamento mobile*/
+@media (max-width: 1000px){
+    /*Body*/
+    body{
+        padding-right: 2.5%; 
+        padding-left: 2.5%;
+    }
+    /*NavBar*/
+    header{
+        font-size: 18px;
+    }
+    nav ul{
+        gap: 0.5rem;
+    }
+    nav a{
+        padding: 0.5rem 0.75rem;
+        font-size: 20px;
+    }
+    .social-section {
+        box-shadow: 2.5px 2.5px rgb(0, 0, 0);
+    }
+}
+
+
+@media (max-width: 700px){
+.social-section ul {
+        flex-direction: column;   /* verticale */
+        align-items: center;      /* centra le icone */
+        gap: 100px;                /* distanza più sensata per mobile */
+    }
+
+    .social-section img {
+        width: 200px;             /* opzionale: riduci dimensione icone */
+    }
+
+}
+
+@media (min-width: 2000px){
+    
+    /*Body*/
+    body{
+        padding-right: 30%; 
+        padding-left: 30%;
+    }
+
+    /*NavBar*/
+    header{
+        font-size: 18px;
+    }
+    nav ul{
+        gap: 0.5rem;
+    }
+    nav a{
+        padding: 0.5rem 0.75rem;
+        font-size: 20px;
+    }
+}
+
+a, strong {
+    background: none;
+    color: #de4d4d;
+    font-weight: 700;
+    text-decoration: none;
+    
+}
+
+a:hover, stronger:hover{
+    color: #3945b5;
+    text-decoration: none;
+}
+
+
+/*Soluzione fornitami da GPT per un*/
+nav li {
+    position: relative;
+}
+
+nav li .tooltip {
+    display: none;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: #000000 solid;
+    background: #ffffff;
+    color: #000000;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 20px;
+    white-space: nowrap;
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+nav li a.info:hover + .tooltip,
+nav li a.info:focus + .tooltip {
+    display: block;
+    opacity: 1;
+}
